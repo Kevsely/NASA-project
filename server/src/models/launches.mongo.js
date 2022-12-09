@@ -32,3 +32,6 @@ const launchesSchema = new mongoose.Schema({
         default: true
     }
 })
+
+// Connects launchesSchema with the 'launches' collections
+module.export = mongoose.model('Launch', launchesSchema)

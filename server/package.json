@@ -7,14 +7,15 @@
 	"author": "",
 	"license": "ISC",
 	"scripts": {
-		"test": "jest",
+		"test": "jest --detectOpenHandles",
 		"test-watch": "jest --watch",
 		"watch": "node --watch src/server.js",
 		"start": "node src/server.js",
 		"cluster": "pm2 start src/server.js -i max"
 	},
 	"jest": {
-		"transform": {}
+		"transform": {},
+		"testEnvironment": "node"
 	},
 	"dependencies": {
 		"cors": "^2.8.5",
